@@ -29,18 +29,21 @@
 
   <div id='app'>
     <div class="input-stuff">
-      <input v-model="word" type="text" placeholder="Type a word! :3"> 
-      <button type="button" class="btn btn-primary" @click="save(word)">Save</button>
-      <button type="button" class="btn btn-success" @click="show()">Show</button>
-      <button type="button" class="btn btn-danger" @click="clear()">Clear</button>
+      <input v-model="word" type="text" id="InputWordId" placeholder="Type a word! :3"> 
+      <button type="button" class="btn btn-primary" id="SaveButtonId" @click="save(word)">Save</button>
+      <button type="button" class="btn btn-success" id="ShowButtonId" @click="show()">Show</button>
+      <button type="button" class="btn btn-danger" id="ClearButtonId" @click="clear()">Clear</button>
     </div>
 
+    
     <div v-if="showOutput">
       <div v-if="words.length > 0">
       {{ result }}
       </div>
-    <div v-else>
-      Oh no.. its empty! :(
+    
+
+    <div v-else="showOutput=false">
+      Oh no.. its empty! 
     </div>
   </div>
 

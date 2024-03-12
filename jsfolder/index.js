@@ -3,6 +3,8 @@ const app = Vue.createApp({
     return { 
       word: "",
       words: [],
+      showOutput: false
+      
     };
   },
    
@@ -14,12 +16,16 @@ const app = Vue.createApp({
     
     clear() {
       this.words = [];
+      this.showOutput = false;
 
     },
 
     show() {
-      if(this.words.length >0)
-        this.message = this.words.toString()
+      if(this.words.length > 0) {
+        this.showOutput = true; 
+      } else {
+        this.showOutput = false; 
+      }
     }
   },
 
