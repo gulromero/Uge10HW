@@ -34,8 +34,13 @@
       <button type="button" class="btn btn-success" @click="show()">Show</button>
       <button type="button" class="btn btn-danger" @click="clear()">Clear</button>
     </div>
-    <div>
+
+    <div v-if="showOutput">
+      <div v-if="words.length > 0">
       {{ result }}
+      </div>
+    <div v-else>
+      Oh no.. its empty! :(
     </div>
   </div>
 

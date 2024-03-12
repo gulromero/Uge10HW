@@ -10,6 +10,7 @@ const app = Vue.createApp({
   methods: {
     save(word) { 
       this.words.push(word);
+      this.showOutput = false;
     },
     
     clear() {
