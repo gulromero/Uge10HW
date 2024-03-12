@@ -1,9 +1,8 @@
 const app = Vue.createApp({
   data() {
     return { 
-      word: null,
+      word: "",
       words: [],
-      showOutput: false
     };
   },
    
@@ -14,11 +13,12 @@ const app = Vue.createApp({
     
     clear() {
       this.words = [];
-      this.showOutput = false;
+
     },
 
     show() {
-      this.showOutput = true;
+      if(this.words.length >0)
+        this.message = this.words.toString()
     }
   },
 
